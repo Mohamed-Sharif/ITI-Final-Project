@@ -1,6 +1,6 @@
-resource "kubernetes_deployment" "nodejsapp" {
+resource "kubernetes_deployment" "nodejs" {
   metadata {
-    name = "nodejs-app"
+    name = "nodejs"
     namespace = kubernetes_namespace.dev.metadata[0].name  
     labels = {
       app = "nodejs_app"
@@ -26,7 +26,7 @@ resource "kubernetes_deployment" "nodejsapp" {
       spec {
         container {
           image = "hopa/nodejs_k8s_task"
-          name  = "nodejs_app"
+          name  = "nodejs-app"
 
           
         }
