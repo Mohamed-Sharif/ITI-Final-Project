@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejs-app
+  template:
+    metadata:
+      labels:
+        app: nodejs-app
+    spec:
+      serviceAccountName: jenkins
+      containers:
+        - name: nodejs-app
+          image: 10.99.255.203:5000/repository/Nada_registry/nodejs-app:latest
+          ports:
+            - containerPort: 3000
