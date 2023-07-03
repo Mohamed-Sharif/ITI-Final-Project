@@ -2,19 +2,15 @@ pipeline {
     agent any
     
     stages {
-        stage('Clone App Repository') {
-            steps {
-                // Clone the repository
-                git credentialsId:'GitHub' ,url:'https://github.com/Mohamed-Sharif/ITI-Final-Project.git', branch:'main' 
-            }
-        }
-        
           stage('Deploy Image on minikube') {
             steps {
+                // clone repo
+                git credentialsId:'GitHub' ,url:'https://github.com/Mohamed-Sharif/ITI-Final-Project.git', branch:'main' 
+                
                 // Deploy the app from the Nexus registry to minikube
                 sh """
                 cd App_Manifests
-                kubectl apply -f nodejs_secrets.yaml 
+                kubectl apply -f app_secrets.yaml 
                 kubectl apply -f nodejs_app.yaml 
                 """
             }
