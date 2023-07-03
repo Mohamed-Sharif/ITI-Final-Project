@@ -36,14 +36,14 @@ pipeline {
             steps {
                 // Login to the Nexus registry
                 withCredentials([usernamePassword(credentialsId: 'nexus', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    sh "docker login -u $USERNAME -p $PASSWORD http://nexus.local.com/"
+                    sh "docker login -u $USERNAME -p $PASSWORD 10.111.33.70:5000"
                 }
                 
                 // Tag the image with Nexus registry information
-                sh 'docker tag nodejs-app:latest http://nexus.local.com/repository/nexus-repo/nodejs-app:latest'
+                sh 'docker tag nodejs-app:latest 10.111.33.70:5000/repository/nexus-repo/nodejs-app:latest'
                 
                 // Push the image to Nexus registry
-                sh 'docker push http://nexus.local.com/repository/nexus-repo/nodejs-app:latest'
+                sh 'docker push 10.111.33.70:5000/repository/nexus-repo/nodejs-app:latest'
             }
         }
     
