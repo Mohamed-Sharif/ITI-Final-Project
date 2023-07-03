@@ -201,8 +201,12 @@ kubectl version --short
 `kubectl exec -it mysql-7cccd7f54d-pd6qn -n dev -- mysql -u root -p`
 
 
-
-
+### Create sql user with privileges
+```
+CREATE USER 'sqluser'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'sqluser'@'%' WITH GRANT OPTION;
+flesh PRIVILEGES;
+```
 
 
 
