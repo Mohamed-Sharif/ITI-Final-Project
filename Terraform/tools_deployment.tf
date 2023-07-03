@@ -61,9 +61,7 @@ resource "kubernetes_deployment" "jenkins" {
       }
     }
   }
-      provisioner "local-exec" {
-    command = "kubectl apply -f service_account.yaml"
-}
+      
 }
 
 
