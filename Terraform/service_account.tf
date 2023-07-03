@@ -12,7 +12,7 @@ resource "kubernetes_cluster_role" "jenkins_role" {
 
   rule {
     api_groups = [""]
-    resources  = ["deployments"]
+    resources  = ["deployments","configmaps"]
     verbs      = ["get", "watch", "list", "create"]
   }
 }
@@ -48,8 +48,8 @@ resource "kubernetes_cluster_role" "tools_role" {
 
   rule {
     api_groups = [""]
-    resources  = ["secrets,configmaps"]
-    verbs      = ["get", "watch", "list","create"]
+    resources  = ["secrets","configmaps"]
+    verbs      = ["get", "watch", "list","create","patch","delete"]
   }
 }
 
