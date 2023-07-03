@@ -6,9 +6,10 @@ resource "kubernetes_secret" "mysql_secrets" {
 
   data = {
     mysql-root-password = "admin"
-    mysql-user         = "ITI-Graduation-Project"
-    mysql-password     = "123456789"
+    mysql-user         = "sqluser"
+    mysql-password     = "password"
   }
 
   type = "Opaque"
 }
+

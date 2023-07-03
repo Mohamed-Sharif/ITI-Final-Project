@@ -33,6 +33,11 @@ resource "kubernetes_deployment" "jenkins" {
             container_port = 8080
           }
 
+          security_context {
+          allow_privilege_escalation = false
+          run_as_user = 0
+          }
+
           volume_mount {
             name       = "jenkins-home"
             mount_path = "/var/jenkins_home"
