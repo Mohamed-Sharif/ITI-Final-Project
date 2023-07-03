@@ -13,6 +13,7 @@ pipeline {
             steps {
                 // Deploy the app from the Nexus registry to minikube
                 sh """
+                pwd
                 cd App_Manifests
                 kubectl apply -f nodejs_secrets.yaml 
                 kubectl apply -f nodejs_app.yaml 
