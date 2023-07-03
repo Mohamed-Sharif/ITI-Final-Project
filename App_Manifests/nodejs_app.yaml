@@ -16,7 +16,7 @@ spec:
       serviceAccountName: jenkins
       containers:
         - name: nodejs-app
-          image: 10.107.157.34:5000/repository/nexus-repo/nodejs-app:latest
+          image: 10.111.33.70:5000/repository/nexus-repo/nodejs-app:latest
           ports:
             - containerPort: 3000
           env:
