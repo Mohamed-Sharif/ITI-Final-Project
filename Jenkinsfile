@@ -33,7 +33,7 @@ pipeline {
     
         stage('Deploy Image') {
             steps {
-                git credentialsId:'GitHub' ,url:'https://github.com/mahmoudmohamed22/simple-go-web-application.git', branch:'main' 
+                git credentialsId:'GitHub' ,url:'https://github.com/Mohamed-Sharif/ITI-Final-Project.git', branch:'main' 
                 // Deploy the app from the Nexus registry to Cluster
                 sh """
                 cd Terraform
