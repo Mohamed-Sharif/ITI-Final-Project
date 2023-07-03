@@ -1,4 +1,33 @@
 # ITI_Graduation_Project
+This repository contains the code and configuration for my graduation project from the ITI (Information Technology Institute). The project focuses on setting up a Kubernetes-based deployment pipeline using Jenkins, Minikube, Terraform, Docker, and Kubernetes.
+
+## Project Overview
+
+The goal of this project is to automate the deployment of a Node.js application and MySQL database on a local Kubernetes cluster. The deployment pipeline is orchestrated using Jenkins, with the infrastructure provisioned using Terraform. Here's an overview of the project's main components and tasks:
+
+1. **Setting up the Kubernetes Cluster:**
+   - Utilized Ansible to install and configure Minikube, providing a local Kubernetes instance.
+   - Configured two namespaces: "tools" and "dev" using Terraform, each serving a specific purpose in the pipeline.
+
+2. **Namespace and Pod Configuration:**
+   - Installed Jenkins and Nexus pods in the "tools" namespace using Terraform. Jenkins serves as the automation engine, while Nexus acts as the container registry.
+   - Configured the "dev" namespace to run two pods: one for the Node.js application and another for the MySQL database.
+
+3. **Jenkins Pipeline Job:**
+   - Created a Jenkins pipeline job responsible for automating the deployment process.
+   - The pipeline performs the following steps:
+     - Checks out the source code from the provided GitHub repository: [https://github.com/mahmoud254/jenkins_nodejs_example.git](https://github.com/mahmoud254/jenkins_nodejs_example.git).
+     - Builds the Node.js application using the provided Dockerfile.
+     - Creates a Docker image for the application.
+     - Uploads the Docker image to the Nexus repository for storage.
+
+4. **Docker Container Deployment:**
+   - Developed another Jenkins pipeline job to deploy the Docker container on the desired environment.
+   - The pipeline retrieves the Docker image from Nexus and deploys it to the specified environment on Minikube.
+
+5. **Configuration Management with Secrets:**
+   - Implemented secure handling of microservice configurations using Kubernetes secrets.
+   - Stored sensitive configuration information in secrets and updated the microservice pods to access the configurations securely.
 
 ## Install Minikube using ansible
 
