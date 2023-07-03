@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Clone App Repository') {
+            steps {
+                // Clone the repository
+                git credentialsId:'GitHub' ,url:'https://github.com/Mohamed-Sharif/ITI-Final-Project.git', branch:'main' 
+            }
+        }
+        
+          stage('Deploy Image on minikube') {
+            steps {
+                // Deploy the app from the Nexus registry to minikube
+                sh """
+                cd Terraform
+                kubectl apply -f nodejs_app.yaml 
+                kubectl apply -f mysql.yaml 
+                """
+            }
+        }
+    }
+}
