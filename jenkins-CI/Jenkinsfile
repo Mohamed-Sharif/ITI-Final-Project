@@ -19,16 +19,6 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                Install Docker
-                sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
-                sh 'sh get-docker.sh'
-                sh 'docker version'
-                
-                // Install kubectl
-                sh 'curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"'
-                sh 'chmod +x kubectl'
-                sh 'sudo mv kubectl /usr/local/bin'
-                sh 'kubectl version --client'
                 // Clone the repository
                 git url: 'https://github.com/mahmoud254/jenkins_nodejs_example.git', branch: 'k8s_task'
             }
