@@ -29,8 +29,46 @@ The goal of this project is to automate the deployment of a Node.js application 
    - Implemented secure handling of microservice configurations using Kubernetes secrets.
    - Stored sensitive configuration information in secrets and updated the microservice pods to access the configurations securely.
 
-## Install Minikube using ansible
+## Installing and Configuring Minikube with Ansible
 
+The first step of the project includes an Ansible playbook to automate the installation and configuration of Minikube, allowing you to set up a local Kubernetes cluster effortlessly. The playbook performs the following steps:
+
+1. **Update Apt Cache:**
+   - The playbook updates the apt cache on the target system using the `apt` module. This ensures that the system has the latest package information.
+
+2. **Install Dependencies:**
+   - Necessary dependencies, such as `apt-transport-https`, `ca-certificates`, `curl`, and `software-properties-common`, are installed using the `apt` module. These packages are required for subsequent steps.
+
+3. **Add Docker GPG Key:**
+   - The playbook uses the `apt_key` module to add the GPG key for the Docker repository. This key is necessary to authenticate and verify the packages during installation.
+
+4. **Add Docker Repository:**
+   - The `apt_repository` module is used to add the Docker repository to the system's package sources. This step ensures that Docker can be installed from the official Docker repository.
+
+5. **Install Docker:**
+   - The playbook installs Docker using the `apt` module. The package `docker-ce` is installed to set up the Docker engine on the target system.
+
+6. **Install Minikube Dependencies:**
+   - Required dependencies for Minikube, such as `conntrack`, `ebtables`, and `socat`, are installed using the `apt` module. These dependencies are necessary for Minikube to function properly.
+
+7. **Download Minikube:**
+   - The playbook uses the `get_url` module to download the latest Minikube binary for Linux from the official Google Cloud Storage. The downloaded binary is saved as `/usr/local/bin/minikube` and given executable permissions (`0755`).
+
+8. **Start Minikube Cluster:**
+   - The playbook starts the Minikube cluster using the `command` module. The command `minikube start --driver=docker --force` starts Minikube with the Docker driver, ensuring a consistent and reliable Kubernetes environment.
+
+9. **Set KUBECONFIG Environment Variable:**
+   - The playbook uses the `lineinfile` module to add the `KUBECONFIG` environment variable to the user's `.bashrc` file. This environment variable points to the Kubernetes configuration file (`$HOME/.kube/config`), allowing easy interaction with the Minikube cluster.
+
+Please ensure that the target system meets the necessary requirements and has Ansible installed before executing the playbook.
+
+To run the playbook, use the following command:
+
+```shell
+ansible-playbook playbook.yml
+```
+
+Add `-i inventory` with your inventory file and `playbook.yml` with the path to the Ansible playbook file in case you would run it against a remote server other than the localhost.
 ## Terraform Demo
 
 
