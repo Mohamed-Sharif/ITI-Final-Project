@@ -116,12 +116,22 @@ Write http://nexus.local.com/ in the browser to open nexus
 
 ![Screenshot from 2023-07-02 01-29-55](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/e4e7c5f1-6c87-4882-8dd9-806a42ed534c)
 
+### Insatll docker and kubectl on jenkins pod
+```
+apt update
+apt install docker.io
+apt install -y apt-transport-https gnupg2 curl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+mv kubectl /usr/local/bin/kubectl
+chmod +x /usr/local/bin/kubectl
+kubectl version --short
+
+```
 
 
 
-
-
-
+### Connect to the database
+kubectl exec -it mysql-7cccd7f54d-pd6qn -n dev -- mysql -u root -p
 
 
 
