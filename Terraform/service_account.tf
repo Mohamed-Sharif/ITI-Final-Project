@@ -24,8 +24,8 @@ resource "kubernetes_cluster_role_binding" "jenkins_role_binding" {
 
   subject {
     kind      = "ServiceAccount"
-    name      = kubernetes_service_account.jenkins.name
-    namespace = kubernetes_service_account.jenkins.namespace
+    name      = kubernetes_service_account.jenkins.metadata[0].name
+    namespace = kubernetes_service_account.jenkins.metadata[0].namespace
   }
 
   role_ref {

@@ -1,4 +1,4 @@
-resource "kubernetes_ingress" "nexus_ingress" {
+resource "kubernetes_ingress_v1" "nexus_ingress" {
   metadata {
     name      = "nexus-ingress"
     namespace = "tools"
@@ -8,59 +8,66 @@ resource "kubernetes_ingress" "nexus_ingress" {
       "nginx.ingress.kubernetes.io/proxy-body-size" = "0"
     }
   }
-
   spec {
-    rule {
-      host = "nexus.local.com"
-
+     rule {
+       host = "nexus.local.com"
       http {
         path {
-          path     = "/"
-          pathType = "Prefix"
-
           backend {
-            service_name = "nexus-service"
-            service_port = 80
+            service {
+              name = "nexus-service"
+              port {
+                number = 80
+              }
+            }
           }
-        }
-      }
-    }
 
-    rule {
+          path = "/"
+        }
+    }
+     }
+
+rule {
       host = "docker.local.com"
-
       http {
         path {
-          path     = "/"
-          pathType = "Prefix"
-
           backend {
-            service_name = "nexus-service"
-            service_port = 5000
+            service {
+              name = "nexus-service"
+              port {
+                number = 5000
+              }
+            }
           }
+
+          path = "/"
         }
-      }
     }
 
-    rule {
+}
+  rule {
       host = "jenkins.local.com"
-
       http {
         path {
-          path     = "/"
-          pathType = "Prefix"
-
           backend {
-            service_name = "jenkins-service"
-            service_port = 8080
+            service {
+              name = "jenkins-service"
+              port {
+                number = 8080
+              }
+            }
           }
+
+          path = "/"
         }
-      }
     }
-  }
+
+    }  
+ }
+
 }
 
-resource "kubernetes_ingress" "nodejs_ingress" {
+resource "kubernetes_ingress_v1" "nodejs_ingress" {
   metadata {
     name      = "nodejs-ingress"
     namespace = "dev"
@@ -71,21 +78,24 @@ resource "kubernetes_ingress" "nodejs_ingress" {
     }
   }
 
-  spec {
-    rule {
+spec {
+rule {
       host = "nodejs.local.com"
-
       http {
         path {
-          path     = "/"
-          pathType = "Prefix"
-
           backend {
-            service_name = "nodejs-service"
-            service_port = 3000
+            service {
+              name = "nodejs-service"
+              port {
+                number = 3000
+              }
+            }
           }
+
+          path = "/"
         }
-      }
     }
+
   }
+}
 }
