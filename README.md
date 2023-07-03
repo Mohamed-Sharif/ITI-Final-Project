@@ -131,7 +131,7 @@ kubectl version --short
 
 
 ### Connect to the database
-kubectl exec -it mysql-7cccd7f54d-pd6qn -n dev -- mysql -u root -p
+`kubectl exec -it mysql-7cccd7f54d-pd6qn -n dev -- mysql -u root -p`
 
 
 
