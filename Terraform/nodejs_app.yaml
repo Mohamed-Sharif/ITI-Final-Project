@@ -16,6 +16,28 @@ spec:
       serviceAccountName: jenkins
       containers:
         - name: nodejs-app
-          image: 10.99.255.203:5000/repository/Nada_registry/nodejs-app:latest
+          image: 10.107.157.34:5000/repository/nexus-repo/nodejs-app:latest
           ports:
             - containerPort: 3000
+          env:
+            - name: HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: app-secrets
+                  key: HOST
+            - name: PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secrets
+                  key: mysql-password
+            - name: USERNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: app-secrets
+                  key: USERNAME
+            - name: DATABASE
+              valueFrom:
+                configMapKeyRef:
+                  name: app-secrets
+                  key: DATABASE
+
