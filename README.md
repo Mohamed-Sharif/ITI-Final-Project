@@ -205,7 +205,7 @@ kubectl version --short
 ```
 CREATE USER 'sqluser'@'%' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON *.* TO 'sqluser'@'%' WITH GRANT OPTION;
-flesh PRIVILEGES;
+FLUSH PRIVILEGES;
 ```
 
 
