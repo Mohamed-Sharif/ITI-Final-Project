@@ -48,8 +48,8 @@ resource "kubernetes_cluster_role" "tools_role" {
 
   rule {
     api_groups = [""]
-    resources  = ["secrets"]
-    verbs      = ["get", "watch", "list"]
+    resources  = ["secrets,configmaps"]
+    verbs      = ["get", "watch", "list","create"]
   }
 }
 
