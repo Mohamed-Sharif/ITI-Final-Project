@@ -39,9 +39,7 @@ resource "kubernetes_service" "nexus-service" {
       target_port = 8081
     }
   }
-    provisioner "local-exec" {
-    command = "kubectl apply -f ingress.yaml"
-}
+    
 }
 
 resource "kubernetes_service" "docker-service" {
