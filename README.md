@@ -192,7 +192,18 @@ Write http://nexus.local.com/ in the browser to open nexus
 ### Image pushed to nexus
 ![Screenshot from 2023-07-03 04-31-04](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/aff37445-a026-4a43-bae0-29be1e27a686)
 
-### Connected to mysql
+
+### Connect to the database
+`kubectl exec -it mysql-7cccd7f54d-pd6qn -n dev -- mysql -u root -p`
+
+### Create sql user with privileges
+```
+CREATE USER 'sqluser'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'sqluser'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
+
+### Connecting to mysql
 ![Screenshot from 2023-07-03 11-15-43](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/dbd3709b-f0ab-4292-b1e3-2fef27433e51)
 
 
@@ -204,42 +215,6 @@ Write http://nexus.local.com/ in the browser to open nexus
 ![Screenshot from 2023-07-03 14-35-13](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/d62d3ab1-29a2-4d31-9081-177983764689)
 
 
-## Potential Errors
-1 - If you get a timeout error while applying terraform code:<br>
-you can increase device resources like this `minikube start --driver=virtualbox --cpus 4 --memory 8g --disk-size 20g` or try to restart Minikube.
-
-
-2-  
-
-
-
-
-
-### Insatll docker and kubectl on jenkins pod
-```
-apt update
-
-apt install docker.io
-apt install -y apt-transport-https gnupg2 curl
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-mv kubectl /usr/local/bin/kubectl
-chmod +x /usr/local/bin/kubectl
-kubectl version --short
-
-```
-
-
-
-### Connect to the database
-`kubectl exec -it mysql-7cccd7f54d-pd6qn -n dev -- mysql -u root -p`
-
-
-### Create sql user with privileges
-```
-CREATE USER 'sqluser'@'%' IDENTIFIED BY 'password';
-GRANT ALL PRIVILEGES ON *.* TO 'sqluser'@'%' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-```
 
 
 
