@@ -220,7 +220,7 @@ FLUSH PRIVILEGES;
 
 ## Authors 
 This repository was built with ❤️ by:<br>
-<a href="https://github.com/NadaMarei">- Nada Marei</a> &nbsp&nbsp&nbsp <a href="https://github.com/mahmoudmohamed22">- Mahmoud Abdelwahab</a> &nbsp&nbsp&nbsp<a href="https://github.com/Mohamed-Sharif/ITI-Final-Project">- Mohamed Sharif</a>
+<a href="https://github.com/NadaMarei">- Nada Marei</a>  <a href="https://github.com/mahmoudmohamed22">- Mahmoud Abdelwahab</a> <a href="https://github.com/Mohamed-Sharif/ITI-Final-Project">- Mohamed Sharif</a>
 
 
 
