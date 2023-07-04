@@ -183,9 +183,42 @@ Write http://nexus.local.com/ in the browser to open nexus
 
 ![Screenshot from 2023-07-02 01-29-55](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/e4e7c5f1-6c87-4882-8dd9-806a42ed534c)
 
+
+### Run Jenkins CI 
+![Screenshot from 2023-07-04 08-04-47](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/368dcafe-5003-4b01-80eb-3ae1583e01ff)
+
+![Screenshot from 2023-07-03 19-20-57](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/e95deb80-19ae-41fd-b6dc-b6a9154a5d72)
+
+### Image pushed to nexus
+![Screenshot from 2023-07-03 04-31-04](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/aff37445-a026-4a43-bae0-29be1e27a686)
+
+### Connected to mysql
+![Screenshot from 2023-07-03 11-15-43](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/dbd3709b-f0ab-4292-b1e3-2fef27433e51)
+
+
+### Run Jenkins CD 
+![Screenshot from 2023-07-04 08-06-44](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/61f4bca7-44a0-4638-aa1f-a43885c75009)
+![Screenshot from 2023-07-04 00-32-26](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/bf475d8e-ab50-4407-9f1b-647064925f70)
+
+### App running successfully
+![Screenshot from 2023-07-03 14-35-13](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/d62d3ab1-29a2-4d31-9081-177983764689)
+
+
+## Potential Errors
+1 - If you get a timeout error while applying terraform code:<br>
+you can increase device resources like this `minikube start --driver=virtualbox --cpus 4 --memory 8g --disk-size 20g` or try to restart Minikube.
+
+
+2-  
+
+
+
+
+
 ### Insatll docker and kubectl on jenkins pod
 ```
 apt update
+
 apt install docker.io
 apt install -y apt-transport-https gnupg2 curl
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
