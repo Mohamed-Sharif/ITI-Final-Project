@@ -170,6 +170,7 @@ Write http://nexus.local.com/ in the browser to open nexus
 ![Screenshot from 2023-07-02 01-24-25](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/dfda3c60-c09b-4cb8-b168-d3ac3b187041)
 ![Screenshot from 2023-07-02 01-25-03](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/147dec32-369f-4c91-b089-f2c0c6303c13)
 
+### Activate Docker Bearer Token
 
 
 ### Create Jenkins Credentials for Nexus:
