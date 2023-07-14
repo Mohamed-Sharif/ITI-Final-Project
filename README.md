@@ -74,7 +74,7 @@ Add `-i inventory` with your inventory file and `playbook.yml` with the path to 
 
 ### Start minikube 
 - minikube start
-![Screenshot from 2023-07-01 21-34-20](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/85a50c66-ec63-49fe-9ff4-030cecc2d226)
+<img src="Screenshots/minikube start.png" alt="minikube start" width="500" height="600">
 
 ### Enable ingress
 - Kubernetes Ingress addons are additional components or features that can be installed in a Kubernetes cluster to enhance the functionality of the Ingress resource. Ingress is an API object in Kubernetes that manages external access to services within a cluster.
