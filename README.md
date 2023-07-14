@@ -86,26 +86,26 @@ Add `-i inventory` with your inventory file and `playbook.yml` with the path to 
 
 - minikube addons enable ingress
 
-![Screenshot from 2023-07-01 21-34-35](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/74ee1f12-4fee-475a-b772-e93b9c4a4d6a)
+<img src="Screenshots/minikube enable addons.png" alt="minikube enable addons">
 
 ### Terraform init
-![Screenshot from 2023-07-01 22-19-27](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/4070cbcd-4f65-4164-971e-07aaf21760c1)
+<img src="Screenshots/terraform init.png">
 
 
 ### Terraform apply
-![Screenshot from 2023-07-01 22-22-43](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/9570634a-b8e0-4beb-a4d2-6d638157ae39)
+<img src="Screenshots/terraform apply 1.png">
 
-![Screenshot from 2023-07-01 22-24-37](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/b31f2c4d-b13b-430c-a356-f1112e1d3f01)
+<img src="Screenshots/terraform apply 2.png">
 
 ### Terraform state list
-![Screenshot from 2023-07-01 22-25-30](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/c4b5ca11-4cfd-4281-b4c4-626483cac07d)
+<img src="Screenshots/terraform state list.png">
 
 ### Configure minikube /etc/hosts file
 - Map custom hostnames to the IP addresses of services running in Minikube. This allows us to access services using user-friendly names in your local environment.
 
-![Screenshot from 2023-07-01 22-50-25](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/f7bb9cfb-6b81-4a06-8f46-d6fc4bfbdc0d)
+<img src="Screenshots/configure minikube etc-hosts.png">
 
-![Screenshot from 2023-07-01 22-49-35](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/0c029703-f3ea-421f-abba-66c8f65bea59)
+<img src="Screenshots/configure minikube etc-hosts 1.png">
 
 
 
@@ -116,7 +116,7 @@ Add `-i inventory` with your inventory file and `playbook.yml` with the path to 
 ### Open Jenkins 
 - use http://jenkins.local.com/ in the browser to open jenkins.
 
-![Screenshot from 2023-07-01 22-54-03](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/08ff8c3b-d8b4-4705-af81-2b1a2cf195f1)
+<img src="Screenshots/open jenkins.png">
 
 
 
@@ -124,26 +124,26 @@ Add `-i inventory` with your inventory file and `playbook.yml` with the path to 
 - kubectl get pods -n tools
 - kubectl exec -n tools -it jenkins-745954bdbf-shsn9 -- cat /var/jenkins_home/secrets/initialAdminPassword
 
-![Screenshot from 2023-07-01 23-16-42](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/d2f88c1b-b399-4ae3-8ed6-d4986e9603cc)
+<img src="Screenshots/get jenkins password.png">
 
-![Screenshot from 2023-07-01 23-17-08](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/d313e039-defe-42dc-89f6-365e3329758a)
+<img src="Screenshots/jenkins password 2.png">
 
 ### Customize Jenkins
 - Plugins extend Jenkins with additional features to support many different needs.
-![Screenshot from 2023-07-01 23-17-27](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/7c5591ad-88e1-44e0-a1b7-7014d64bf379)
+<img src="Screenshots/customize jenkins.png">
 
-![Screenshot from 2023-07-01 23-29-24](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/5e9a0193-3261-40e6-8223-6b908ebf9f54)
+<img src="Screenshots/plugins.png">
 
 
 ### Create the First admin user
-![Screenshot from 2023-07-01 23-30-38](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/8122370a-0a51-4173-9fbe-089f616cfbed)
-![Screenshot from 2023-07-01 23-40-11](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/799fa1be-207f-4812-b206-e94505e6a2c0)
+<img src="Screenshots/create first admin.png">
+<img src="Screenshots/first user admin 2.png">
 
 
 ### Open Nexus
 Write http://nexus.local.com/ in the browser to open nexus
-![Screenshot from 2023-07-01 23-01-05](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/5883d678-fcf2-4249-84b8-4007f91e7063)
-![Screenshot from 2023-07-01 23-01-11](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/0284b0fb-8628-4f2f-9acb-7b3514046c2c)
+<img src="Screenshots/open nexus.png">
+<img src="Screenshots/open nexus 2.png">
 
 
 
@@ -151,47 +151,37 @@ Write http://nexus.local.com/ in the browser to open nexus
 ### Get Nexus Admin Password:
 - kubectl get pods -n tools
 - kubectl exec -it nexus-6b5bd9f4ff-l7tmp -n tools -- cat /nexus-data/admin.password
-
-![Screenshot from 2023-07-01 23-48-58](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/ee4b062f-13ed-43e4-8a73-e742cbbc1d8b)
-![Screenshot from 2023-07-01 23-49-21](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/05c1097e-001c-46af-8dad-40f677eaa09c)
-
-
+<img src="Screenshots/get nexus admin password 1.png">
 
 
 ### Create a Nexus user 
-![Screenshot from 2023-07-01 23-55-32](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/940dca02-628b-4fab-b703-67d8c8c748e6)
-![Screenshot from 2023-07-02 01-21-37](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/fb55edf7-8dd4-46cf-9a8c-c79d67918fba)
-
+<img src="Screenshots/create nexus user.png">
 
 
 ### Create Nexus Repo
-![Screenshot from 2023-07-02 01-22-02](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/64da8290-c64d-4502-a9d4-af292fd9eafa)
-![Screenshot from 2023-07-02 01-22-37](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/0ba716af-97e0-4620-9d14-2fd78405da7f)
-![Screenshot from 2023-07-02 01-24-25](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/dfda3c60-c09b-4cb8-b168-d3ac3b187041)
-![Screenshot from 2023-07-02 01-25-03](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/147dec32-369f-4c91-b089-f2c0c6303c13)
+<img src="Screenshots/create nexus repo 1.png">
+<img src="Screenshots/create nexus repo 2.png">
+<img src="Screenshots/create nexus repo 3.png">
 
 ### Activate Docker Bearer Token
-
+<img src="Screenshots/Activate Docker Bearer Token.png">
 
 ### Create Jenkins Credentials for Nexus:
-![Screenshot from 2023-07-02 01-27-45](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/df26675a-9ec2-44ef-bdc7-73589ce7eeef)
 
-![Screenshot from 2023-07-02 01-27-52](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/40e785a6-9da8-4a40-be4e-03f0cf3e61a3)
+<img src="Screenshots/nexus credentials 1.png">
 
-![Screenshot from 2023-07-02 01-27-57](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/3c400c4d-64f1-41ea-8271-087f5accfb14)
+<img src="Screenshots/nexus credentials 2.png">
 
-![Screenshot from 2023-07-02 01-29-43](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/cac7fd09-59ba-4cd9-b8b5-66cc09bb8bb3)
+<img src="Screenshots/nexus credentials 3.png">
 
-![Screenshot from 2023-07-02 01-29-55](https://github.com/NadaMarei/ITI-Graduation-Project/assets/118731723/e4e7c5f1-6c87-4882-8dd9-806a42ed534c)
+
 
 
 ### Run Jenkins CI 
-![Screenshot from 2023-07-04 08-04-47](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/368dcafe-5003-4b01-80eb-3ae1583e01ff)
-
-![Screenshot from 2023-07-03 19-20-57](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/e95deb80-19ae-41fd-b6dc-b6a9154a5d72)
+<img src="Screenshots/jenkins CI 1.png">
 
 ### Image pushed to nexus
-![Screenshot from 2023-07-03 04-31-04](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/aff37445-a026-4a43-bae0-29be1e27a686)
+<img src="Screenshots/image pushed to nexus.png">
 
 
 ### Connect to the database
@@ -205,19 +195,19 @@ FLUSH PRIVILEGES;
 ```
 
 ### Connecting to mysql
-![Screenshot from 2023-07-03 11-15-43](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/dbd3709b-f0ab-4292-b1e3-2fef27433e51)
+<img src="Screenshots/connect to database.png">
 
 
 ### Run Jenkins CD 
-![Screenshot from 2023-07-04 08-06-44](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/61f4bca7-44a0-4638-aa1f-a43885c75009)
-![Screenshot from 2023-07-04 00-32-26](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/bf475d8e-ab50-4407-9f1b-647064925f70)
+<img src="Screenshots/jenkins CD.png">
+
 
 ### App running successfully
-![Screenshot from 2023-07-03 14-35-13](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/d62d3ab1-29a2-4d31-9081-177983764689)
+<img src="Screenshots/Running App.png">
 
 
 ### Project Done successfully
-![Screenshot from 2023-07-03 14-36-07](https://github.com/Mohamed-Sharif/ITI-Final-Project/assets/118731723/e087b9d9-b151-440d-8ada-5e03bbaeca87)
+<img src="Screenshots/Done Successfully.png">
 
 ## Authors 
 This repository was built with ❤️ by:<br>
