@@ -204,6 +204,8 @@ FLUSH PRIVILEGES;
 
 
 ### App running successfully
+use http://nodejs.local.com/ in the browser to open jenkins.
+
 <img src="Screenshots/Running App.png">
 
 
