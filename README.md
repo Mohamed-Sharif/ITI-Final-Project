@@ -185,6 +185,7 @@ Write http://nexus.local.com/ in the browser to open nexus
 
 
 ### Connect to the database
+`kubectl get pods -n tools`
 `kubectl exec -it mysql-7cccd7f54d-pd6qn -n dev -- mysql -u root -p`
 
 ### Create sql user with privileges
