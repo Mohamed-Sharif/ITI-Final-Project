@@ -95,10 +95,10 @@ Add `-i inventory` with your inventory file and `playbook.yml` with the path to 
 ### Terraform apply
 <img src="Screenshots/terraform apply 1.png">
 
-<img src="Screenshots/terraform apply 2.png">
+<img src="Screenshots/terraform apply 2 .png">
 
 ### Terraform state list
-<img src="Screenshots/terraform state list.png">
+<img src="Screenshots/terraform state list 1.png">
 
 ### Configure minikube /etc/hosts file
 - Map custom hostnames to the IP addresses of services running in Minikube. This allows us to access services using user-friendly names in your local environment.
